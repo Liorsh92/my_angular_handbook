@@ -14,6 +14,8 @@ ng new project-name
 
 [Handbook](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#the-primitives-string-number-and-boolean)
 
+[tsconfig-json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+
 number, boolean, string, any 
 
 `let isDone: boolean = false`<br>
@@ -58,6 +60,16 @@ const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
 Enums are one of the few features TypeScript has which is not a type-level extension of JavaScript.<br><br>
 
 Enums allow a developer to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. TypeScript provides both numeric and string-based enums.
+
+```
+enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+}
+```
+Above, we have a numeric enum where Up is initialized with 1. All of the following members are auto-incremented from that point on. In other words, Direction.Up has the value 1, Down has 2, Left has 3, and Right has 4.
 
 
 
