@@ -16,9 +16,9 @@ ng new project-name
 
 number, boolean, string, any 
 
-`let isDone: boolean = false`
-`let count: number = 6`
-`let name: string = "leon"`
+`let isDone: boolean = false`<br>
+`let count: number = 6`<br>
+`let name: string = "leon"`<br>
 `let list: number[] = [1,2,3] || let list Array<number> = [1,2,3]` 
 
 ### Differences Between Type Aliases and Interfaces
@@ -31,9 +31,11 @@ type Point = {
 	y: number 
 }
 
-function printCoord( pt: point ) {
+function printCoord( pt: Point ) {
 	console.log(pt.x,pt.y)
 }
+
+printCoord({x: 1, y:2})
 ```
 
 ```
@@ -50,4 +52,13 @@ const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
 
 const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
 ```
+
+### Enums
+
+Enums are one of the few features TypeScript has which is not a type-level extension of JavaScript.<br><br>
+
+Enums allow a developer to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. TypeScript provides both numeric and string-based enums.
+
+
+
 
