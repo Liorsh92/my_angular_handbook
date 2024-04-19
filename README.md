@@ -1,12 +1,50 @@
 
 ## Angular Notes
 ---
+
+### Setup
+
+npm install -g @angular/cli
+
+Windows - Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
 angular cli = ng
 
-to create a new  angular project
+Create a new  angular project
 
-ng new project-name 
+ng new my-app
 
+### Run
+
+cd my-app
+
+ng serve --open
+
+The ng serve command launches the server, watches your files, and rebuilds the app as you make changes to those files.
+
+The --open (or just -o) option automatically opens your browser to http://localhost:4200/.
+
+### Components
+
+An Angular component can be identified by the component suffix (e.g., my-custom-name.component.ts and has the following:
+A decorator to define configuration options for things like:
+	A selector that defines what the tag name is when referring a component in a template<br>
+	An HTML template that controls what is rendered to the browser
+
+A TypeScript class that defines the behavior of the component. Examples include handling user input, managing state, defining methods, etc.
+
+```
+// 📄 todo-list-item.component.ts
+@Component({
+  standalone: true,
+  selector: 'todo-list-item',
+  template: ` <li>(TODO) Read cup of coffee introduction</li> `,
+  styles: ['li { color: papayawhip; }'],
+})
+export class TodoListItem {
+  /* Component behavior is defined in here */
+}
+```
 
 ## TypeScript Notes
 ---
